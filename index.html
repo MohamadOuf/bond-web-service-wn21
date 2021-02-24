@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Bond Web Service Demo</title>
-<link rel="stylesheet" href="css/bonds.css" />
+<link rel="stylesheet" href="bonds.css" />
 <style>
 body {font-family:georgia;}
 
@@ -76,7 +76,7 @@ function bondJSON(data){
     $("films").html("");
 // adds title to h3 elment
     $("#filmtitle").html(data.title);
-    
+
     $.each(data.films,function(i,item){   
         let text = `
                <b>Title:</b>: ${item.Title}<br />
