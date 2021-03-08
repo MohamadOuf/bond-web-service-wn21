@@ -19,7 +19,7 @@ function serverSetup(server,cat){
        if(cat == "res"){//box office
            url = "data/restaurants-ratings.js";
        }else{//year
-           url = "data/resturants-year.js"; 
+           url = "data/restaurants-year.js"; 
        }
    }
    return url;
@@ -54,7 +54,7 @@ function loadAJAX(cat)
        type:"GET",
        dataType: "json",
        url:url,
-       success:restaurantJSON,
+       success:toConsole,
 
        error: function(xhr, status, error){
          var errorMessage = xhr.status + ': ' + xhr.statusText
@@ -93,8 +93,9 @@ function restaurantJSON(data){
                <div class="pic"><img src="thumbnails/${item.Image}" /></div>
 
         `;
-
+        alert(text);
         $("<div></div>").html(text).appendTo("#restaurant");
+
     });
 
 
