@@ -1,6 +1,6 @@
 {
 	"title": "Restaurants by Rating",
-	"resturnats":[
+	"restaurants":[
 			  
 			  
 			  {
