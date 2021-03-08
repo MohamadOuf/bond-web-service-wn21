@@ -19,7 +19,7 @@ function serverSetup(server,cat){
        if(cat == "res"){//box office
            url = "data/restaurants-ratings.js";
        }else{//year
-           url = "data/bond-year.js"; 
+           url = "data/resturants-year.js"; 
        }
    }
    return url;
@@ -73,11 +73,11 @@ function resturantJSON(data){
 
 
     // clear films from previous click
-    $("resturant").html("");
+    $("restaurant").html("");
 // adds title to h3 elment
-    $("#filmtitle").html(data.title);
+    $("#restauranttitle").html(data.title);
 
-    $.each(data.films,function(i,item){   
+    $.each(data.restaurants,function(i,item){   
         let text = `
                <b>Name:</b>: ${item.Name}<br />
                <b>Phone #</b>: ${item.Phone}<br />
@@ -85,23 +85,12 @@ function resturantJSON(data){
                <b>Rating</b>: ${item.Rating}<br />
                <b>Cuisine</b>: ${item.Cuisine}<br />
                
-               <div class="pic"><img src = "thumbnails/${item.Image}" /></div>
+               <div class="pic"><img src="thumbnails/${item.Image}" /></div>
 
-        
-        
-        
-        
         `;
 
-        $("<div></div>").html(text).appendTo("#films");
-
-
-
+        $("<div></div>").html(text).appendTo("#restaurant");
     });
-
-
-
-
 
 
 }
@@ -109,11 +98,11 @@ function resturantJSON(data){
 </script>
 </head>
 	<body>
-	<h1>Resturants by ratings</h1>
-		<a href="res" class="category">Resturants by Ratings</a><br />
-		<a href="year" class="category">Resturants by Ratings</a>
-		<h3 id="filmtitle">Title Will Go Here</h3>
-		<div id="resturant">
+	<h1>restaurant by ratings</h1>
+		<a href="res" class="category">restaurant by Ratings</a><br />
+		<a href="year" class="category">restaurant by Ratings</a>
+		<h3 id="restauranttitle">Title Will Go Here</h3>
+		<div id="restaurant">
 		
 		</div>
 		<div id="output">Results go here</div>
