@@ -17,7 +17,7 @@ function serverSetup(server,cat){
        url = "api.php?cat=" + cat;
    }else{//server is HTML only - simulate web service
        if(cat == "res"){//box office
-           url = "restaurants-ratings.js";
+           url = "data/restaurants-ratings.js";
        }else{//year
            url = "data/bond-year.js"; 
        }
@@ -54,7 +54,7 @@ function loadAJAX(cat)
        type:"GET",
        dataType: "json",
        url:url,
-       success:bondJSON
+       success:resturantJSON
    });
 }
 
@@ -66,7 +66,7 @@ function toConsole(data)
 	//$("#output").text(JSON.stringify(data));
 }
 
-function bondJSON(data){
+function resturantJSON(data){
 //JSON processing data goes here
 //toConsole(data);
 //#output").text(JSON.stringify(data));
@@ -110,8 +110,8 @@ function bondJSON(data){
 </head>
 	<body>
 	<h1>Resturants by ratings</h1>
-		<a href="year" class="category">Resturants by Ratings</a><br />
-		<a href="box" class="category">Resturants by Ratings</a>
+		<a href="res" class="category">Resturants by Ratings</a><br />
+		<a href="year" class="category">Resturants by Ratings</a>
 		<h3 id="filmtitle">Title Will Go Here</h3>
 		<div id="resturant">
 		
