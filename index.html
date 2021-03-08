@@ -54,7 +54,7 @@ function loadAJAX(cat)
        type:"GET",
        dataType: "json",
        url:url,
-       success:toConsole,
+       success:restaurantJSON,
 
        error: function(xhr, status, error){
          var errorMessage = xhr.status + ': ' + xhr.statusText
