@@ -2,6 +2,22 @@
 	"title": "Restaurants by Rating",
 	"restaurants":[
 			  
+		{
+			"Name":"Mediterranean Gyro Grill",
+			"Phone":"+1 253-874-1144",
+			"address":"34024 Hoyt Rd SW, Federal Way, WA 98023-3224",
+			"Rating":4.5,
+			"Cuisine":"Mediterranean",
+			"Image":"med.jpg"
+		  },
+		  {
+			"Name":"Tokyo-ya Ramen & Izakaya",
+			"Phone":"+1 206-592-6552",
+			"address":"31507 Pacific Hwy S 31507 Pacific Hwy S, 98003-5405, Federal Way, Washington",
+			"Rating":4.5,
+			"Cuisine":"Japanses",
+			"Image":"ramen.jpg"
+		  },
 			  
 			  {
 				"Name":"East India Grill",
@@ -83,7 +99,7 @@
 				"Rating":4.5,
 				"Cuisine":"Mediterranean",
 				"Image":"med.jpg"
-			  },
+			  }
 			 
 
 			

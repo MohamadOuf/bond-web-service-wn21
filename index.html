@@ -56,10 +56,11 @@ function loadAJAX(cat)
        url:url,
        success:restaurantJSON,
 
-       error: function(xhr, status, error){
+       /**error: function(xhr, status, error){
          var errorMessage = xhr.status + ': ' + xhr.statusText
          alert('Error - ' + errorMessage);
        }
+       **/
    });
 }
 
@@ -93,7 +94,7 @@ function restaurantJSON(data){
                <div class="pic"><img src="images/${item.Image}" /></div>
 
         `;
-        alert(text);
+        //alert(text);
         $("<div></div>").html(text).appendTo("#restaurant");
 
     });
